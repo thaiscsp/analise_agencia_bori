@@ -34,6 +34,15 @@ $(document).ready(function() {
     for (var i = 0; i < graficos.length; i++) {
         $('#graficos').append('<div id="'+graficos[i]+'"></div><br><br>');
         $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
+
+        $('h4').append('<br>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </button>
+                            <div id="links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                        </div>');
+        
         $('#links').append('<a class="dropdown-item" href="#'+graficos[i]+'">'+graficos[i]+'</a>');
     }
 });
