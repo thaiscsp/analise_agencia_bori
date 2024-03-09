@@ -31,19 +31,6 @@ $(document).ready(function() {
                 'autores_genero_ano',
                 'autores_posicao_genero']
 
-for (var i = 0; i <= graficos.length; i++) {
-    $.ajax({
-        url: 'graficos/'+String(graficos[i])+'.html',
-        type: 'GET',
-        success: function (data) {
-            $('#graficos').append('<div id ="'+String(graficos[i])+'">'+data+'</div><br><br>');
-        },
-        error: function (status, error) {
-            console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
-        }
-    });
-
-
     for (var i = 0; i < graficos.length; i++) {
         (function(i) {
             $.ajax({
