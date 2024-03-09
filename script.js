@@ -35,11 +35,11 @@ $(document).ready(function() {
         $.ajax({
             url: 'graficos/' +graficos[i]+ '.html',
             type: 'GET',
-            success: function(data, i) {
-                $('#graficos').append('<div id="' +graficos[i]+ '">' + data + '</div><br><br>');
+            success: function(data) {
+                $('#graficos').append('<div>' + data + '</div><br><br>');
             },
-            error: function(status, error, i) {
-                console.error('Erro ao carregar o gráfico ' +graficos[i]+ ':', status, error);
+            error: function(status, error) {
+                console.error('Erro ao carregar o gráfico:', status, error);
             }
         });
     }
