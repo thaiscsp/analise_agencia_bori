@@ -32,7 +32,6 @@ $(document).ready(function() {
                 'autores_posicao_genero']
 
 for (var i = 0; i <= graficos.length; i++) {
-    console.log(graficos[i]);
     $.ajax({
         url: 'graficos/'+String(graficos[i])+'.html',
         type: 'GET',
@@ -43,5 +42,21 @@ for (var i = 0; i <= graficos.length; i++) {
             console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
         }
     });
+
+
+    for (var i = 0; i < graficos.length; i++) {
+        (function(i) {
+            $.ajax({
+                url: 'graficos/' +graficos[i]+ '.html',
+                type: 'GET',
+                success: function(data) {
+                    $('#graficos').append('<div id="' +graficos[i]+ '">' + data + '</div><br><br>');
+                },
+                error: function(status, error) {
+                    console.error('Erro ao carregar o gráfico ' +graficos[i]+ ':', status, error);
+                }
+            });
+        });
+    }
 }
 });
