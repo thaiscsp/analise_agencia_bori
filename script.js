@@ -32,6 +32,7 @@ $(document).ready(function() {
                 'autores_posicao_genero']
 
 for (var i = 0; i <= graficos.length; i++) {
+    console.log(graficos[i]);
     $.ajax({
         url: 'graficos/'+String(graficos[i])+'.html',
         type: 'GET',
