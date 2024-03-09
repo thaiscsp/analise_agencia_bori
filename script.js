@@ -32,15 +32,20 @@ $(document).ready(function() {
                 'autores_posicao_genero'];
 
     for (var i = 0; i < graficos.length; i++) {
+        $('#graficos').append('<div>'+
+                                  '<iframe src="https://thaiscsp.github.io/analise_agencia_bori/graficos/'+graficos[i]+'.html"></iframe>'+
+                              '</div><br><br>');
+        /*
         $.ajax({
             url: 'graficos/' +graficos[i]+ '.html',
             type: 'GET',
             success: function(data) {
-                $('#graficos').append('<div>' + data + '</div><br><br>');
+                
             },
             error: function(status, error) {
                 console.error('Erro ao carregar o gráfico:', status, error);
             }
         });
+        */
     }
 });
