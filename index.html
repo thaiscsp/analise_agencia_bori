@@ -1,4 +1,3 @@
-<!-- Arquivo principal.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +8,13 @@
 </head>
 <body>
 
-    <h1>Página Principal</h1>
+    <h1>Agência BORI - Análise</h1>
 
-    <?php
-    graficos = ['completude_quantidade',
+    <div id="graficos"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        var graficos = ['completude_quantidade',
                 'completude_percentual',
                 'numero_prs_doi',
                 'numero_dois_ano',
@@ -43,11 +45,20 @@
                 'autores_citados_genero',
                 'autores_genero_ano',
                 'autores_posicao_genero']
-    
-    foreach (graficos as grafico) {
-        <?php include grafico.'.html'; ?>
-    }
-    ?>
 
+        for (var i = 0; i <= graficos.length; i++) {
+            $.ajax({
+                url: graficos[i]+'.html',
+                type: 'GET',
+                success: function (data) {
+                    $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div>');
+            },
+                error: function (status, error) {
+                    console.error('Erro ao carregar o conteúdo:', status, error);
+                }
+            });
+        }
+    </script>
+    
 </body>
 </html>
