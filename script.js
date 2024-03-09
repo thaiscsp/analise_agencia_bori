@@ -34,6 +34,6 @@ $(document).ready(function() {
     for (var i = 0; i < graficos.length; i++) {
         $('#graficos').append('<div id="'+graficos[i]+'"></div><br><br>');
         $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
-        $('#links').append('<option><a href="#'+graficos[i]+'">'+graficos[i]+'</a></option>');
+        $('#links').append('<a class="dropdown-item" href="#'+graficos[i]+'">'+graficos[i]+'</a>');
     }
 });
