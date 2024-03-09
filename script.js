@@ -35,7 +35,7 @@ $(document).ready(function() {
         $('#graficos').append('<div id="'+graficos[i]+'"></div><br><br>');
         $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
 
-        $('h4').append('<br>
+        $('#titulo').append('<br>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Menu
