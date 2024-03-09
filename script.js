@@ -33,10 +33,10 @@ $(document).ready(function() {
 
 for (var i = 0; i <= graficos.length; i++) {
     $.ajax({
-        url: 'graficos/'+graficos[i]+'.html',
+        url: 'graficos/'+String(graficos[i])+'.html',
         type: 'GET',
         success: function (data) {
-            $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div><br><br>');
+            $('#graficos').append('<div id ="'+String(graficos[i])+'">'+data+'</div><br><br>');
         },
         error: function (status, error) {
             console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
