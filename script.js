@@ -36,7 +36,7 @@ for (var i = 0; i <= graficos.length; i++) {
         url: graficos[i]+'.html',
         type: 'GET',
         success: function (data) {
-            $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div>');
+            $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div><br>');
         },
         error: function (status, error) {
             console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
