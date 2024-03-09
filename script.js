@@ -73,7 +73,7 @@ for (var i = 0; i <= graficos.length; i++) {
             $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div>');
         },
         error: function (status, error) {
-            console.error('Erro ao carregar o gráfico:', status, error);
+            console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
         }
     });
 }
