@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 for (var i = 0; i <= graficos.length; i++) {
     $.ajax({
-        url: '/graficos/'+graficos[i]+'.html',
+        url: 'graficos/'+graficos[i]+'.html',
         type: 'GET',
         success: function (data) {
             $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div><br><br>');
