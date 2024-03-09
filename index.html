@@ -5,143 +5,15 @@
     <meta charset='utf-8'>
     <title>Agência BORI - Análise</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body id="body-pd">
-    <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="https://abori.com.br/wp-content/uploads/2021/07/abori-logo-circle-transparente@2x.png" style="max-height: 100px; max-width: 100px;"></div>
-    </header>
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
-                <div class="nav_list">
-                    <a href="#" class="nav_link active">
-                        <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span>
-                    </a>
-
-                    <a href="#completude_quantidade" class="nav_link">
-                        <span class="nav_name">Completude das colunas</span>
-                    </a>
-                    <a href="#completude_percentual" class="nav_link">
-                        <span class="nav_name">Completude das colunas (percentual)</span>
-                    </a>
-                    <a href="#numero_prs_doi" class="nav_link">
-                        <span class="nav_name">Número de releases com DOIs únicos</span>
-                    </a>
-                    <a href="#numero_dois_ano" class="nav_link">
-                        <span class="nav_name">Número de releases com DOIs únicos por ano</span>
-                    </a>
-                    <a href="#percentual_prs_doi" class="nav_link">
-                        <span class="nav_name">Percentual de releases com DOI</span>
-                    </a>
-                    <a href="#percentual_dois_ano" class="nav_link">
-                        <span class="nav_name">Percentual de releases com DOI por ano</span>
-                    </a>
-                    <a href="#prs_por_mes" class="nav_link">
-                        <span class="nav_name">Releases por mês</span>
-                    </a>
-                    <a href="#prs_mes_ano" class="nav_link">
-                        <span class="nav_name">Releases por mês ao longo dos anos</span>
-                    </a>
-                    <a href="#dois_por_mes" class="nav_link">
-                        <span class="nav_name">DOIs por mês</span>
-                    </a>
-                    <a href="#dois_mes_ano" class="nav_link">
-                        <span class="nav_name">DOIs por mês ao longo dos anos</span>
-                    </a>
-                    <a href="#prs_por_categoria" class="nav_link">
-                        <span class="nav_name">Releases por categoria (BORI)</span>
-                    </a>
-                    <a href="#prs_categoria_anos" class="nav_link">
-                        <span class="nav_name">Releases por categoria ao longo dos anos (BORI)</span>
-                    </a>
-                    <a href="#prs_sobre_covid" class="nav_link">
-                        <span class="nav_name">Releases sobre COVID-19</span>
-                    </a>
-                    <a href="#prs_covid_ano" class="nav_link">
-                        <span class="nav_name">Releases sobre COVID-19 por ano</span>
-                    </a>
-                    <a href="#pubs_indexadas_scielo" class="nav_link">
-                        <span class="nav_name">Publicações indexadas no SciELO</span>
-                    </a>
-                    <a href="#pubs_indexadas_ano" class="nav_link">
-                        <span class="nav_name">Publicações indexadas no SciELO por ano</span>
-                    </a>
-                    <a href="#instituicoes_por_regiao" class="nav_link">
-                        <span class="nav_name">Instituições por região</span>
-                    </a>
-                    <a href="#instituicoes_regiao_ano" class="nav_link">
-                        <span class="nav_name">Instituições por região ao longo dos anos</span>
-                    </a>
-                    <a href="#pubs_area_conhecimento" class="nav_link">
-                        <span class="nav_name">Publicações por área do conhecimento (OpenAlex)</span>
-                    </a>
-                    <a href="#pubs_area_ano" class="nav_link">
-                        <span class="nav_name">Publicações por área do conhecimento ao longo dos anos (OpenAlex)</span>
-                    </a>
-                    <a href="#pubs_area_geral" class="nav_link">
-                        <span class="nav_name">Publicações por área geral do conhecimento</span>
-                    </a>
-                    <a href="#area_geral_ano" class="nav_link">
-                        <span class="nav_name">Publicações por área geral do conhecimento ao longo dos anos</span>
-                    </a>
-                    <a href="#pubs_tipo_acesso" class="nav_link">
-                        <span class="nav_name">Publicações por tipo de acesso</span>
-                    </a>
-                    <a href="#pubs_acesso_ano" class="nav_link">
-                        <span class="nav_name">Publicações por tipo de acesso ao longo dos anos</span>
-                    </a>
-                    <a href="#pubs_acesso_index" class="nav_link">
-                        <span class="nav_name">Publicações de acesso dourado x indexadas no SciELO</span>
-                    </a>
-                    <a href="#pubs_dourado_scielo" class="nav_link">
-                        <span class="nav_name">Publicações de acesso dourado x indexadas no SciELO ao longo dos anos</span>
-                    </a>
-                    <a href="#autores_citados_posicao" class="nav_link">
-                        <span class="nav_name">Autores citados por posição</span>
-                    </a>
-                    <a href="#autores_posicao_ano" class="nav_link">
-                        <span class="nav_name">Autores citados por posição ao longo dos anos</span>
-                    </a>
-                    <a href="#autores_citados_genero" class="nav_link">
-                        <span class="nav_name">Autores citados por gênero</span>
-                    </a>
-                    <a href="#autores_genero_ano" class="nav_link">
-                        <span class="nav_name">Autores citados por gênero ao longo dos anos</span>
-                    </a>
-                    <a href="#autores_posicao_genero" class="nav_link">
-                        <span class="nav_name">Posição x Gênero dos autores citados</span>
-                    </a>
-                </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-        </nav>
-    </div>
-
-    <div class="height-100 bg-light" id="graficos">
+<body>
+    <div id="graficos">
         <h4>Agência BORI - Análise</h4>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
