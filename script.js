@@ -29,20 +29,18 @@ $(document).ready(function() {
                 'autores_posicao_ano',
                 'autores_citados_genero',
                 'autores_genero_ano',
-                'autores_posicao_genero']
+                'autores_posicao_genero'];
 
     for (var i = 0; i < graficos.length; i++) {
-        (function(i) {
-            $.ajax({
-                url: 'graficos/' +graficos[i]+ '.html',
-                type: 'GET',
-                success: function(data) {
-                    $('#graficos').append('<div id="' +graficos[i]+ '">' + data + '</div><br><br>');
-                },
-                error: function(status, error) {
-                    console.error('Erro ao carregar o gráfico ' +graficos[i]+ ':', status, error);
-                }
-            });
+        $.ajax({
+            url: 'graficos/' +graficos[i]+ '.html',
+            type: 'GET',
+            success: function(data) {
+                $('#graficos').append('<div id="' +graficos[i]+ '">' + data + '</div><br><br>');
+            },
+            error: function(status, error) {
+                console.error('Erro ao carregar o gráfico ' +graficos[i]+ ':', status, error);
+            }
         });
     }
 });
