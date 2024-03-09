@@ -32,13 +32,11 @@ $(document).ready(function() {
                 'autores_posicao_genero']
 
 for (var i = 0; i <= graficos.length; i++) {
-    $('#graficos').append('<p><small>#'+String(i+1)+'</small></p>');
-    
     $.ajax({
         url: graficos[i]+'.html',
         type: 'GET',
         success: function (data) {
-            $('#graficos').append('<div id ="'+graficos[i]+'">'+data+'</div><br><br>');
+            $('#graficos').append('<div id ="'+graficos[i]+'" style="border-radius: 25px;">'+data+'</div><br><br>');
         },
         error: function (status, error) {
             console.error('Erro ao carregar o gráfico '+graficos[i]+':', status, error);
