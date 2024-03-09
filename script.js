@@ -37,7 +37,10 @@ $(document).ready(function() {
                                   '<iframe src="https://thaiscsp.github.io/analise_agencia_bori/graficos/'+graficos[i]+'.html"></iframe>'+
                               '</div><br><br>');
                               */
-        $('#graficos').load('graficos/' +graficos[i]+ '.html');
+        
+        $('#graficos').append('<div id="'+graficos[i]+'"></div>');
+        $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
+        
         /*
         $.ajax({
             url: 'graficos/' +graficos[i]+ '.html',
