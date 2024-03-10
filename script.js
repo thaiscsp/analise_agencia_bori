@@ -30,19 +30,18 @@ $(document).ready(function() {
                 'autores_citados_genero',
                 'autores_genero_ano',
                 'autores_posicao_genero'];
-
-    for (var i = 0; i < graficos.length; i++) {
-        $('#graficos').append('<div id="'+graficos[i]+'"></div><br><br>');
-        $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
-
-        $('#titulo').append('<br>'+
+    
+    $('#titulo').append('<br>'+
                         '<div class="dropdown">'+
                             '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+
                                 'Menu'+
                             '</button>'+
                             '<div id="links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>'+
                         '</div>');
-        
+
+    for (var i = 0; i < graficos.length; i++) {
+        $('#graficos').append('<div id="'+graficos[i]+'"></div><br><br>');
+        $('#'+graficos[i]).load('graficos/' +graficos[i]+ '.html');
         $('#links').append('<a class="dropdown-item" href="#'+graficos[i]+'">'+graficos[i]+'</a>');
     }
 });
